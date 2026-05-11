@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 0, 0, 0;
+  --background-end-rgb: 0, 0, 0;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+}
+
+/* 魔杖光标样式 */
+.wand-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23fbbf24' d='M16 0L18 10L20 2L22 12L18 8L24 20L16 14L8 20L14 8L10 12L12 2L14 10L16 0Z'/%3E%3Cpath fill='%2378350f' d='M16 20L16 32' stroke='%2378350f' stroke-width='2'/%3E%3C/svg%3E") 16 28, auto;
+}
+
+/* 默认指针样式（用于可点击元素） */
+.pointer-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23fbbf24' d='M16 0L18 10L20 2L22 12L18 8L24 20L16 14L8 20L14 8L10 12L12 2L14 10L16 0Z'/%3E%3Cpath fill='%2378350f' d='M16 20L16 32' stroke='%2378350f' stroke-width='2'/%3E%3C/svg%3E") 16 28, pointer;
+}
+
+/* 十字准星光标（用于绘制） */
+.crosshair-cursor {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23fbbf24' d='M16 0L18 10L20 2L22 12L18 8L24 20L16 14L8 20L14 8L10 12L12 2L14 10L16 0Z'/%3E%3Cpath fill='%2378350f' d='M16 20L16 32' stroke='%2378350f' stroke-width='2'/%3E%3C/svg%3E") 16 28, crosshair;
+}
