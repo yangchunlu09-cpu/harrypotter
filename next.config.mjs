@@ -1,26 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  swcMinify: false,
-  experimental: {
-    optimizeCss: false,
-    forceSwcTransforms: false,
-  },
+  output: 'export', // 开启纯静态导出，GitHub Pages必须要这个
+  distDir: 'out',
+  trailingSlash: true, // 彻底解决路由404
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'trae-api-cn.mchost.guru',
-        port: '',
-        pathname: '/**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-  },
+    unoptimized: true // 静态环境图片正常加载
+  }
 };
 
 export default nextConfig;
